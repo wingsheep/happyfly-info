@@ -11,6 +11,7 @@ before_install:
 
 script:
   - yarn run build
+  - echo "$DOCKER_PASSWORD"
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t thawsoar/happyfly-info:latest .
-  - docker push thawsoar/happyfly-info:latest
+  - docker build -t happyfly/happyfly-info:latest .
+  - docker push happyfly/happyfly-info:latest
