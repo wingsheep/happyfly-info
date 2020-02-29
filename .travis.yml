@@ -1,16 +1,20 @@
 sudo: required
 
 language: node_js
+
 node_js:
   - stable
+
 services:
   - docker
 
 before_install:
   - yarn install
 
+before_script:
+  - echo "\$DOCKER_PASSWORD" | docker login -u "\$DOCKER_USERNAME" --password-stdin
 script:
   - yarn run build
-  - docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t happyfly/happyfly-info:latest .
   - docker push happyfly/happyfly-info:latest
+  
