@@ -12,7 +12,7 @@ services:
 #   - yarn install
 
 before_script:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 script:
   # - yarn run build
   - docker build -t happyfly/happyfly-info:latest .
