@@ -6,4 +6,5 @@ services:
         image: happyfly/happyfly-info:latest
         ports:
             - "3000:80"
+            - "3000:433"
         restart: on-failure
