@@ -2,8 +2,8 @@ version: "3.7" # 这个是配置文件的版本，不同的版本号声明方式
 
 services:
     info:
-        container_name: happlyfly-info
-        image: happlyfly/happlyfly-info:latest
+        container_name: happyfly-info
+        image: happyfly/happyfly-info:latest
         ports:
             - "3000:80"
         restart: on-failure
