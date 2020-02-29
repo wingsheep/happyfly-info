@@ -12,7 +12,8 @@ services:
 #   - yarn install
 
 before_script:
-  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+  - echo "$DOCKER_PASSWORD" | winpty docker login -u "$DOCKER_USERNAME" --password-stdin
+  - echo "$DOCKER_PASSWORD"
 script:
   # - yarn run build
   - docker build -t happyfly/happyfly-info:latest .
