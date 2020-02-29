@@ -8,13 +8,13 @@ node_js:
 services:
   - docker
 
-before_install:
-  - yarn install
+# before_install:
+#   - yarn install
 
 before_script:
-  - echo "\$DOCKER_PASSWORD" | docker login -u "\$DOCKER_USERNAME" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 script:
-  - yarn run build
+  # - yarn run build
   - docker build -t happyfly/happyfly-info:latest .
   - docker push happyfly/happyfly-info:latest
   
