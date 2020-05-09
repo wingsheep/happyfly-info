@@ -1,3 +1,5 @@
+
+!(https://www.travis-ci.org/Thawsoar/happyfly-info.svg?branch=master&status=passed)
 # happyfly-info
 
 ## Project setup
