@@ -1,5 +1,5 @@
 
-!(https://www.travis-ci.org/Thawsoar/happyfly-info.svg?branch=master&status=passed)
+![build:started](https://www.travis-ci.org/Thawsoar/happyfly-info.svg?branch=master&status=started)
 # happyfly-info
 
 ## Project setup
